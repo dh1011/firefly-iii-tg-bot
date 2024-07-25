@@ -1,0 +1,6 @@
+python-telegram-bot
+flask
+uvicorn
+asgiref
+python-dotenv
+requests

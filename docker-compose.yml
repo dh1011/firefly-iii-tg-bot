@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8443:8443"
+    environment:
+      - TG_BOT_TOKEN=${TG_BOT_TOKEN}
+      - CATEGORIES=${CATEGORIES}
+      - SOURCES=${SOURCES}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+      - PORT=${PORT}
+      - FF_API_ENDPOINT=${FF_API_ENDPOINT}
+      - FF_API_TOKEN=${FF_API_TOKEN}
+    volumes:
+      - .:/app
